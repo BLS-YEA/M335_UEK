@@ -3,10 +3,12 @@ import React from "react";
 import FaIcon from "react-native-vector-icons/FontAwesome";
 import IoIcon from "react-native-vector-icons/Ionicons";
 import MaIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import Fa6Icon from "react-native-vector-icons/FontAwesome6";
 
 import HomeScreen from "../app/Home/home";
 import CounterScreen from "../app/Counter/counter";
 import BMIScreen from "../app/BMI/bmi";
+import ToDoScreen from "../app/ToDo/todo";
 
 const Tab = createBottomTabNavigator();
 
@@ -46,6 +48,15 @@ export default function TabBar() {
         options={{
           tabBarIcon: ({ color, size }) => (
             <IoIcon name="calculator" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="ToDo"
+        component={ToDoScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Fa6Icon name="person-biking" color={color} size={size} />
           ),
         }}
       />
