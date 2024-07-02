@@ -38,7 +38,7 @@ export default function App() {
   };
 
   return (
-    <View className=" flex-1 h-3/4 justify-center items-center bg-purple-500 gap-10 px-5 py-20">
+    <View className=" flex-1 justify-center items-center bg-purple-500 gap-10 px-5 pt-20 pb-2">
       <Text className=" flex text-4xl text-white ">To Do List</Text>
       <View className="flex-row gap-2">
         <TextInput
@@ -54,7 +54,7 @@ export default function App() {
           <Text className="text-white ">{isEditing ? "Update" : "Add"}</Text>
         </Pressable>
       </View>
-      <ScrollView className="w-full h-3/4 p-5">
+      <ScrollView className="w-full h-full px-5">
         <View className="flex-col gap-2">
           {tasks.map((task, index) => (
             <View
