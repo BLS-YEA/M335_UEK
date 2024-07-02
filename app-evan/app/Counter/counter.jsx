@@ -8,19 +8,19 @@ export default function Coutner() {
   return (
     <View className="flex-1 justify-center items-center bg-purple-500 gap-10">
       <Text className="font-bold text-white text-3xl">Counter</Text>
-      <View className="flex flex-row gap-5">
+      <View className="flex flex-row w-1/2 justify-between">
         <Pressable
-          className="bg-gray-800 rounded-xl p-1 "
+          className="bg-gray-800 rounded-xl p-1 w-16 flex items-center "
           onPress={() => setCounter(counter - 1)}
         >
-          <Text className="text-xl text-white p-2">Decrement</Text>
+          <Text className="text-xl text-white p-2">-1</Text>
         </Pressable>
-        <Text className="text-white text-3xl">{counter}</Text>
+        <Text className="text-white text-3xl ">{counter}</Text>
         <Pressable
-          className="bg-gray-800 rounded-xl p-1 "
+          className="bg-gray-800 rounded-xl p-1 w-16 text-center flex items-center"
           onPress={() => setCounter(counter + 1)}
         >
-          <Text className="text-xl text-white p-2">Incerement</Text>
+          <Text className="text-xl text-white p-2">+1</Text>
         </Pressable>
       </View>
       <Pressable
